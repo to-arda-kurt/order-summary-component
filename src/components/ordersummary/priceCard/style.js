@@ -5,11 +5,13 @@ export const PriceTag = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 279px;
   height: 81px;
   background: #f7f9ff;
   border-radius: 11px;
   margin: 22px 0 0 0;
+  @media only screen and (min-width: 460px) {
+    height: 98px;
+  }
 `;
 
 export const PriceTagIcon = styled.img``;
@@ -26,6 +28,9 @@ export const PriceTagPlan = styled.h2`
   line-height: 19px;
   margin: 0;
   color: #1f2e55;
+  @media only screen and (min-width: 460px) {
+    font-size: 16px;
+  }
 `;
 
 export const PriceTagCost = styled.p`
@@ -34,6 +39,9 @@ export const PriceTagCost = styled.p`
   line-height: 19px;
   color: #717fa6;
   margin: 0;
+  @media only screen and (min-width: 460px) {
+    font-size: 16px;
+  }
 `;
 
 export const PriceTagChanger = styled.a`
@@ -43,6 +51,10 @@ export const PriceTagChanger = styled.a`
   text-decoration-line: underline;
   line-height: 17px;
   color: #382ae1;
+  transition: 0.3s;
+  @media only screen and (min-width: 460px) {
+    font-size: 16px;
+  }
 
   &:hover {
     text-decoration-line: none;

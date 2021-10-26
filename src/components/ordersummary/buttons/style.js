@@ -5,6 +5,9 @@ export const ButtonsWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-top: 22px;
+  @media only screen and (min-width: 460px) {
+    margin-top: 32px;
+  }
 `;
 
 export const Button = styled.button`
@@ -21,4 +24,17 @@ export const Button = styled.button`
   font-size: 15px;
   line-height: 20px;
   color: ${(props) => (props.passive ? '#717FA6' : '#ffffff')};
+  transition: 0.3s;
+
+  @media only screen and (min-width: 460px) {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  &:hover {
+    text-decoration-line: none;
+    color: ${(props) => (props.passive ? 'black' : '#ffffff')};
+    background: ${(props) => (props.passive ? 'none' : '#766CF1')};
+    cursor: pointer;
+  }
 `;

@@ -1,6 +1,7 @@
 import OrderSummary from './components/ordersummary';
 import styled, { createGlobalStyle } from 'styled-components';
 import mobilePatternSVG from './assets/img/pattern-background-mobile.svg';
+import desktopPatternSVG from './assets/img/pattern-background-desktop.svg';
 
 const App = () => {
   const order = { cycle: 'Annual Plan', cost: 59.99, currency: '$' };
@@ -24,6 +25,13 @@ const App = () => {
   const PatternSVG = styled.div`
     background-image: url(${mobilePatternSVG});
     background-repeat: no-repeat;
+    width: 100vw;
+
+    @media only screen and (min-width: 376px) {
+      background-image: url(${desktopPatternSVG});
+      background-repeat: no-repeat;
+      background-size: contain;
+    } ;
   `;
 
   return (
